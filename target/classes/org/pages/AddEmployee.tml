@@ -1,0 +1,144 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" xmlns:p="tapestry:parameter">
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .form-container {
+        width: 600px; /* Adjust the width as needed */
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: row; /* Keep it as row */
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    label {
+        width: 30%; /* Adjust the width as needed */
+        display: block;
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+    .input-container {
+        width: 65%; /* Adjust the width as needed */
+    }
+
+    input, select, textarea {
+        width: 100%; /* Adjust the width as needed */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .error-container {
+        width: 65%; /* Align the error container with the input field */
+        margin-top: 8px;
+        font-size: 80%;
+        color: red;
+    }
+
+    .submit-container {
+        text-align: center;
+    }
+
+    t:submit {
+        background-color: #4CAF50;
+        color: white;
+         padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    t:submit:hover {
+        background-color: #45a049;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        color: #333;
+    }
+</style>
+
+<body>
+<div class="form-container">
+    <h2 style="margin-bottom:20px">Add Employee</h2>
+
+    <t:form t:id="addEmployeeForm">
+        <div class="form-row">
+            <label for="id">ID:</label>
+            <div class="input-container">
+                <t:textfield t:id="id" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="name">Name:</label>
+            <div class="input-container">
+                <t:textfield t:id="name" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="age">Age:</label>
+            <div class="input-container">
+                <t:textfield t:id="age" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="address">Address:</label>
+            <div class="input-container">
+                <t:textfield t:id="address" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="username">Username:</label>
+            <div class="input-container">
+                <t:textfield t:id="username" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <div class="input-container">
+                <t:passwordfield t:id="password" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="retypePassword">Retype Password:</label>
+            <div class="input-container">
+                <t:passwordfield t:id="retypePassword" />
+            </div>
+        </div>
+
+        <div class="error-container">
+            <t:errors />
+        </div>
+
+        <div class="submit-container">
+            <t:submit value="Add" />
+        </div>
+    </t:form>
+</div>
+</body>
+
+</html>

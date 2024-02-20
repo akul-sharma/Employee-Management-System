@@ -1,0 +1,27 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" xmlns:p="tapestry:parameter">
+
+
+<body>
+<!--    <div t:id="header"/>-->
+    <h2 style="text-align:center margin-top:40px">Employee List</h2>
+
+
+    <t:grid source="employees" row="currentEmployee" t:include="id,name,age,address"  style="width: 90%; height: 200px; margin-left: 5%; margin-top: 20px">
+        <p:idCell>
+            <t:pagelink page="EmployeeDetails" context="${currentEmployee.id}">${currentEmployee.id}</t:pagelink>
+        </p:idCell>
+
+    </t:grid>
+
+
+</body>
+</html>
+
+
+
+
+
+
+        <!--        <p:empty>-->
+        <!--            <p>There are no users to display; you can <t:pagelink page="user/add">add some</a>.</p>-->
+        <!--        </p:empty>-->
